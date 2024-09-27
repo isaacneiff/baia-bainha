@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    gap: 15px;
+    max-width: 800px;
+
+}
+
+.card {
+    width: 100%;
+    height: 200px;
+    background-color: #505050;
+    aspect-ratio: 3/4;
+    border-radius: 4px;
+    position: relative;
+    transition: all 500ms ease;
+    transform-style: preserve-3d;
+
+    &:hover {
+        transform: rotateY(180deg);
+    }
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #505050;
+    position: absolute;
+}
+
+.front {
+    background-image: url('../assets/beth.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.back {
+    background-image: url('../assets/back.png');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+
+}
