@@ -10,8 +10,12 @@ const validateInput = ({ target }) => {
     }
 }
 
-const handleSubmit = () =>
+const handleSubmit = (event) => {
+    event.preventDefault()
+    localStorage.setItem('jogador', input.value)
+    window.location = 'index.html'
+}
 
 
-    input.addEventListener('input', validateInput)
+input.addEventListener('input', validateInput)
 form.addEventListener('submit', handleSubmit)
