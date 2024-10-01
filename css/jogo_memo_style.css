@@ -10,42 +10,37 @@
 }
 
 .grid {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin: 0 auto;
     gap: 15px;
+    width: 100%;
     max-width: 800px;
-
+    margin: 0 auto;
 }
 
 .card {
-    width: 100%;
-    height: 200px;
-    background-color: #505050;
     aspect-ratio: 3/4;
+    width: 100%;
     border-radius: 5px;
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
-    margin-top: 10px;
-
+    background-color: #ccc;
 }
 
 .face {
     width: 100%;
     height: 100%;
-    background-size: cover;
     position: absolute;
+    background-size: cover;
     background-position: center;
-    border: 1px solid rgb(9, 88, 9);
-    border-radius: 8px;
+    border: 2px solid #00b5cc;
+    border-radius: 5px;
+    transition: all 600ms ease;
+
 }
 
 .front {
-
-    background-size: cover;
-    background-position: center;
     transform: rotatey(180deg);
 }
 
@@ -57,4 +52,9 @@
 
 .reveal-card {
     transform: rotateY(180deg);
+}
+
+.disable-card {
+    filter: saturate(0);
+    opacity: 0.5;
 }
